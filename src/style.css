@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    /*colors*/
+    
+    /*Primary*/
+    
+    --Orange: hsl(25, 97%, 53%);
+    
+    /*Neutral*/
+    
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --White: hsl(0, 0%, 100%);
+    --btnbackground:hsl(210, 19%, 25%);
+}
+
+body{
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Overpass', sans-serif;
+}
+main{
+    margin-bottom: 20px;
+}
+
+.rating-start{
+background-color: var(--DarkBlue);
+max-width: 445px;
+height: 419px;
+padding: 31px 33px 33px 33px;
+border-radius: 15px;
+}
+
+.star{
+    background-color: var(--btnbackground);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.star img{
+    width: 20px;
+    height: 20px;
+}
+.title{
+    font-size: 23px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.p-text{
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--MediumGrey);
+  margin-bottom: 30px;
+}
+.rating input[type="button"]{
+ background-color: var(--btnbackground);
+ color: var(--MediumGrey);
+ border-radius: 50%;
+ width: 55px;
+ height: 55px;
+ border: none;
+ outline: none;
+ margin-bottom: 30px;
+ font-size: 14px;
+ font-weight: 700;
+ cursor: pointer;
+}
+.rating input[type="button"]:hover{
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
+.rating input[type="button"]:not(:last-child) {
+    margin-right: 21px;
+}
+.rating input[type="button"].active {
+    background-color: var(--Orange);
+    color: var(--White);
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.submit input[type="button"]{
+    background-color: var(--Orange);
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 17px 138px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.submit input[type="button"]:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+@media only screen and (max-width: 600px) {
+    .rating-start{
+        width: 360px;
+        height: 330px;
+        padding: 20px;
+    }
+    .star{
+        margin-bottom: 21px;
+        width: 40px;
+        height: 40px;
+    }
+    .star img{
+        width: 16px;
+        height: 16px;
+    }
+    .title{
+        font-size: 19px;
+        margin-bottom: 21px;
+    }
+    .p-text{
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .rating input[type="button"]{
+        width: 45px;
+        height: 45px;
+        margin-bottom: 22px;
+    }
+    .rating input[type="button"]:not(:last-child){
+        margin-right: 17px;
+    }
+    .submit input[type="button"]{
+        padding: 17px 111px;
+        font-size: 13px;
+    }
+}
+
+.thank-you{
+    background-color: var(--DarkBlue);
+    max-width: 440px;
+    max-height: 419px;
+    padding: 45px 42px 48px 35px;
+    border-radius: 15px;
+    display: none;/*flex*/
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.thank-you img {
+    margin-bottom: 33px;
+}
+
+.thank-you .selection{
+    background-color: var(--btnbackground);
+    color: var(--Orange);
+    width: 225px;
+    height: 34px;
+    border-radius: 25px;
+    align-items: center;
+    font-size: 17px;
+    padding: 9px 19px;
+    margin-bottom: 37px;
+}
+
+.thank-you .thank-u{
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--White);
+    margin-bottom: 18px;
+}
+.thank-you .message{
+    color: var(--MediumGrey);
+}
+
+@media only screen and (max-width: 600px) {
+    .thank-you{
+        height: 370px;
+        width: 329px;
+        padding: 30px 27px 40px;
+    }
+    .selection{
+        margin-bottom: 27px;
+        font-size: 14px;
+    }
+    .thank-u{
+        font-size: 20px;
+    }
+    .message{
+        font-size: 12px;
+    }
+}
